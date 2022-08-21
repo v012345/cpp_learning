@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "problems/findMedianSortedArrays.h"
+#include "problems/Solution.h"
 using std::cout;
 using std::string;
 using std::vector;

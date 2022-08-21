@@ -1,6 +1,7 @@
-#include "findMedianSortedArrays.h"
+#include "Solution.h"
 //没有什么好的方案 , o(m+n)
 double Solution::findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
+
 {
     vector<int> t;
     int l = nums1.size() + nums2.size();
@@ -44,4 +45,8 @@ double Solution::findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
         double n1 = (double)t[mid];
         return n1;
     }
+}
+
+string Solution::longestPalindrome(string s) {
+    
 }
