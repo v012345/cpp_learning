@@ -48,43 +48,52 @@ double Solution::findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
 
 string Solution::longestPalindrome(string s)
 {
-    map<char, vector<int>> m;
+    map<char, vector<int>> charMap;
     string::iterator it_of_stirng = s.begin();
     map<char, vector<int>>::iterator it;
     int i = 0;
-
     int n = s.length();
-
-    // Temporary string to store the reverse
-    string rev;
-
-    for (int i = n - 1; i >= 0; i--)
-        rev.push_back(s[i]);
-
     for (; it_of_stirng != s.end(); it_of_stirng++)
     {
         // cout << typeid(*it_of_stirng).name() << std::endl; //c
-        it = m.find(*it_of_stirng);
-        if (it != m.end())
+        it = charMap.find(*it_of_stirng);
+        if (it != charMap.end())
         {
             it->second.push_back(i);
         }
         else
         {
-            m[*it_of_stirng] = vector<int>(1, i);
+            charMap[*it_of_stirng] = vector<int>(1, i);
         }
         i++;
     }
 
     int len = 1;
     string result;
-    auto func = [](string &s, string &rs, int pos)
+    auto func = [](string &s, vector<int> &arr)
     {
-        int rpos = s.size() - 1 - pos;
-        cout << s[pos] << " " << rs[rpos] << std::endl;
-    };
+        // int len = s.length();
+        string result;
+        if (arr.size() == 1)
+        {
+            result[0] = s[arr[0]];
+            return result;
+        }
+        else
+        {
+            int len = 0;
+            string temp;
+            for (vector<int>::iterator it1 = arr.begin(); it1 != arr.end(); it1++)
+            {
+                for (vector<int>::iterator it2 = arr.begin(); it2 != arr.end(); it2++)
+                {
 
-    func(s, rev, 1);
+                    /* code */
+                }
+            }
+        }
+        return result;
+    };
 
     return result;
 }
