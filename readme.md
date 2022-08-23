@@ -12,3 +12,7 @@ cmake .. -G "MinGW Makefiles"
 mingw32-make
 ./HelloWorld.exe
 ```
+
+```console
+mingw32-make clean # 清理 生成 .exe 文件
+```
